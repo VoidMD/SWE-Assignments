@@ -4,21 +4,28 @@ public class Rectangular extends Shape {
     private double length;
     private double width;
 
-    public Rectangular(double height , double length , double width){
-        if(length < 0){
+    public Rectangular() {
+        this.height = 1;
+        this.width = 1;
+        this.length = 1;
+
+        calculateVolume();
+    }
+
+    public Rectangular(double height, double length, double width) {
+        if (length < 0) {
+            throw new IllegalArgumentException("Wrong input");
+        } else if (width < 0) {
+            throw new IllegalArgumentException("Wrong input");
+        } else if (height < 0) {
             throw new IllegalArgumentException("Wrong input");
         }
-        else if(width < 0){
-            throw new IllegalArgumentException("Wrong input");
-        }
-        else if(height < 0){
-            throw new IllegalArgumentException("Wrong input");
-        }
-        else {
-            this.length = length;
-            this.width = width;
-            this.height = height;
-        }
+
+        this.length = length;
+        this.width = width;
+        this.height = height;
+
+        calculateVolume();
 
     }
 
@@ -36,8 +43,8 @@ public class Rectangular extends Shape {
 
     @Override
     public double calculateVolume() {
-        super.volume = getHeight()*length*width;
-        return getHeight()*length*width;
+        super.volume = getHeight() * length * width;
+        return getHeight() * length * width;
     }
 
 
