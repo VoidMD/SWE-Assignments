@@ -1,9 +1,10 @@
-
-public class Rectangular implements Shape {
+public class Rectangular extends Shape {
 
     private double height;
     private double length;
     private double width;
+    private double volume;
+
 
     public Rectangular(){
 
@@ -12,8 +13,7 @@ public class Rectangular implements Shape {
     public Rectangular(double height , double length , double width){
         this.length = length;
         this.width = width;
-        setHeight(height);
-
+        this.height = height;
 
     }
 
@@ -28,8 +28,12 @@ public class Rectangular implements Shape {
         return height;
     }
 
+
     @Override
-    public double getVolume() {
-        return 0;
+    public double calculateVolume() {
+        super.volume = getHeight()*length*width;
+        return getHeight()*length*width;
     }
+
+
 }
