@@ -2,13 +2,13 @@ public abstract class Shape implements Comparable<Shape> {
     public double volume;
     public int compareTo(Shape o) {
             if (volume > o.volume){
-                System.out.println("Bigger than "+o.getClass().getSimpleName());
+                System.out.println("Bigger than ");
                 return 1;}
             else if (volume < o.volume){
-                System.out.println("Less than "+o.getClass().getName());
+                System.out.println("Less than ");
                 return -1;}
             else{
-                System.out.println("equal to "+o.getClass().getSimpleName());
+                System.out.println("equal to ");
                 return 0;}
         }
 

@@ -3,17 +3,22 @@ public class Rectangular extends Shape {
     private double height;
     private double length;
     private double width;
-    private double volume;
-
-
-    public Rectangular(){
-
-    }
 
     public Rectangular(double height , double length , double width){
-        this.length = length;
-        this.width = width;
-        this.height = height;
+        if(length < 0){
+            throw new IllegalArgumentException("Wrong input");
+        }
+        else if(width < 0){
+            throw new IllegalArgumentException("Wrong input");
+        }
+        else if(height < 0){
+            throw new IllegalArgumentException("Wrong input");
+        }
+        else {
+            this.length = length;
+            this.width = width;
+            this.height = height;
+        }
 
     }
 
