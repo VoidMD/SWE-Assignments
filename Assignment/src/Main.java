@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        Shape s1 = new Cylinder(34,3);
-        Shape s2 = new Rectangular(2,2,13);
+        Shape s1 = new Cylinder(3,2);
+        Shape s2 = new Rectangular(3,6,5);
+        System.out.println(s2.calculateVolume());
 
         s1.compareTo(s2);
 
